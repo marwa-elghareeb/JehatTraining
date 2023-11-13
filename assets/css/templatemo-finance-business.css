@@ -177,6 +177,7 @@ a.border-button:hover {
 	background-color: #a4c639;
 	height: 46px;
 	line-height: 46px;
+	align-self: center;
 }
 
 .sub-header ul li {
