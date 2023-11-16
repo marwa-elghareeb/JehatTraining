@@ -139,106 +139,110 @@ https://templatemo.com/tm-545-finance-business
       </div>
     </div>
 
-    <div class="contact-information">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="contact-item">
-              <i class="fa fa-phone"></i>
-              <h4>Phone</h4>
-              <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-              <a href="#">090-080-0760</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-item">
-              <i class="fa fa-envelope"></i>
-              <h4>Email</h4>
-              <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-              <a href="#">info@company.com</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-item">
-              <i class="fa fa-map-marker"></i>
-              <h4>Location</h4>
-              <p>1020 New Mountain Street<br>Forest Park, FP 11220</p>
-              <a href="#">View on Google Maps</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <style>
+      body {
+          font-family: 'Markazi Text', serif;
+          font-size: 18px;
+      }
 
-    <div class="callback-form contact-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Send us a <em>message</em></h2>
-              <span>Suspendisse a ante in neque iaculis lacinia</span>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="contact-form">
-              <form id="contact" action="" method="get">
-                <div class="row">
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      .survey-form {
+          background-color: #f8f9fa;
+          padding: 30px;
+          margin-top: 50px;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
 
-    <div id="map">
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
-      <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+      .survey-form h2 {
+          text-align: center;
+          font-size: 32px;
+          margin-bottom: 20px;
+      }
 
-    <div class="partners contact-partners">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="owl-partners owl-carousel">
-              <div class="partner-item">
-                <img src="assets/images/client-01.png" alt="">
+      .survey-form label {
+          display: block;
+          margin-top: 15px;
+          font-size: 20px;
+      }
+
+      .survey-form input,
+      .survey-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 8px;
+          margin-bottom: 20px;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          border-radius: 5px;
+      }
+
+      .survey-form input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          cursor: pointer;
+      }
+  </style>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <div class="survey-form">
+                  <h2>استبيان قياس مدى رضا المساهمين</h2>
+                  <form id="surveyForm" action="#" method="post">
+                      <label for="contributorName">اسم المساهم:</label>
+                      <input type="text" id="contributorName" name="contributorName" required>
+
+                      <label for="nationalId">رقم الهوية:</label>
+                      <input type="text" id="nationalId" name="nationalId" required>
+
+                      <label for="mobileNumber">رقم الجوال:</label>
+                      <input type="text" id="mobileNumber" name="mobileNumber" required>
+
+                      <label for="boardPerformance">ما مدى رضاك عن أداء مجلس الإدارة؟</label>
+                      <div class="star-rating">
+                          <input type="radio" id="boardPerformance1" name="boardPerformance" value="1" required>
+                          <label for="boardPerformance1"></label>
+
+                          <input type="radio" id="boardPerformance2" name="boardPerformance" value="2" required>
+                          <label for="boardPerformance2"></label>
+
+                          <input type="radio" id="boardPerformance3" name="boardPerformance" value="3" required>
+                          <label for="boardPerformance3"></label>
+
+                          <input type="radio" id="boardPerformance4" name="boardPerformance" value="4" required>
+                          <label for="boardPerformance4"></label>
+
+                          <input type="radio" id="boardPerformance5" name="boardPerformance" value="5" required>
+                          <label for="boardPerformance5"></label>
+                      </div>
+
+                      <label for="transparencySatisfaction">ما مدى رضاك عن الشفافية في عمل مجلس الإدارة؟</label>
+                      <div class="star-rating">
+                          <input type="radio" id="transparencySatisfaction1" name="transparencySatisfaction" value="1" required>
+                          <label for="transparencySatisfaction1"></label>
+
+                          <input type="radio" id="transparencySatisfaction2" name="transparencySatisfaction" value="2" required>
+                          <label for="transparencySatisfaction2"></label>
+
+                          <input type="radio" id="transparencySatisfaction3" name="transparencySatisfaction" value="3" required>
+                          <label for="transparencySatisfaction3"></label>
+
+                          <input type="radio" id="transparencySatisfaction4" name="transparencySatisfaction" value="4" required>
+                          <label for="transparencySatisfaction4"></label>
+
+                          <input type="radio" id="transparencySatisfaction5" name="transparencySatisfaction" value="5" required>
+                          <label for="transparencySatisfaction5"></label>
+                      </div>
+
+                      <label for="additionalComments">أرسل لنا تعليقات إضافية:</label>
+                      <textarea id="additionalComments" name="additionalComments" rows="4" required></textarea>
+
+                      <input type="submit" value="إرسال">
+                  </form>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
 
 
     <!-- Footer Starts Here -->
