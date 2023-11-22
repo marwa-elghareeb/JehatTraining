@@ -1,0 +1,4 @@
+1- make all pages extention .php
+2- make layout (Header + footer)
+3- Bootstrap arabic not added
+4-
