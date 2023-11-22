@@ -299,7 +299,7 @@ header .navbar {
 }
 .navbar .navbar-nav a.nav-link {
 	text-transform: capitalize;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 300;
 	letter-spacing: 0.5px;
 	color: #fff;
